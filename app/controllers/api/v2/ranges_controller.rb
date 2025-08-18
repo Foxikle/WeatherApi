@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 module Api
   module V2
-    class RangesController
+    class RangesController < ApplicationController
       # GET /api/v2/range
       def show
         start_date = DateTime.parse(params[:start_date].to_s)
