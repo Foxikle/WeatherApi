@@ -9,7 +9,6 @@ module Api
         end_date = DateTime.parse(params[:end_date].to_s)
 
         snapshots_in_range = WeatherSnapshot.where(dateutc: start_date..end_date).order(:dateutc)
-        puts "Snapshots in range #{snapshots_in_range.size}"
         render json: snapshots_in_range
       end
     end
