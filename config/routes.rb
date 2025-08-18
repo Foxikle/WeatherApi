@@ -7,5 +7,8 @@ Rails.application.routes.draw do
       resource :post, only: [:show]
       resource :range, only: [:show]
     end
+    namespace :v2 do
+      resource :range, only: [:show]
+    end
   end
 end
